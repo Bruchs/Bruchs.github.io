@@ -3,6 +3,42 @@
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
+
+ $('#dw-btn').click(function() {
+    $('#dw').css({
+        'display': 'inherit'
+    });
+     $('#gd').css({
+        'display': 'none'
+    });
+     $('#bb').css({
+        'display': 'none'
+    });
+});
+
+  $('#gd-btn').click(function() {
+    $('#gd').css({
+        'display': 'inherit'
+    });
+     $('#dw').css({
+        'display': 'none'
+    });
+      $('#bb').css({
+        'display': 'none'
+    });
+});
+
+  $('#bb-btn').click(function() {
+    $('#gd').css({
+        'display': 'none'
+    });
+     $('#dw').css({
+        'display': 'none'
+    });
+      $('#bb').css({
+        'display': 'inherit'
+    });
+});
  
 (function($) {
     "use strict"; // Start of use strict
