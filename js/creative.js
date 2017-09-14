@@ -5,39 +5,38 @@
  */
 
  $('#dw-btn').click(function() {
-    $('#dw').css({
-        'display': 'inherit'
-    });
-     $('#gd').css({
-        'display': 'none'
-    });
-     $('#bb').css({
-        'display': 'none'
-    });
+    $('#dw').fadeIn("slow");
+    $('#gd').fadeOut("slow");;
+    $('#bb').fadeOut("slow");
+	$('#rm').fadeOut("slow");
+});
+
+ $('#rm-btn').click(function() {
+	$('#rm').fadeIn("slow");
+    $('#dw').fadeOut("slow");
+    $('#gd').fadeOut("slow");
+    $('#bb').fadeOut("slow");
 });
 
   $('#gd-btn').click(function() {
-    $('#gd').css({
-        'display': 'inherit'
-    });
-     $('#dw').css({
-        'display': 'none'
-    });
-      $('#bb').css({
-        'display': 'none'
-    });
+    $('#gd').fadeIn("slow");
+    $('#dw').fadeOut("slow");
+    $('#bb').fadeOut("slow");
+	$('#rm').fadeOut("slow");
+});
+
+  $('.close-btn').click(function() {
+    $('#gd').fadeOut("slow");
+    $('#dw').fadeOut("slow");
+    $('#bb').fadeOut("slow");
+	$('#rm').fadeOut("slow");
 });
 
   $('#bb-btn').click(function() {
-    $('#gd').css({
-        'display': 'none'
-    });
-     $('#dw').css({
-        'display': 'none'
-    });
-      $('#bb').css({
-        'display': 'inherit'
-    });
+    $('#gd').fadeOut("slow");
+    $('#dw').fadeOut("slow");
+    $('#bb').fadeIn("slow");
+	$('#rm').fadeOut("slow");
 });
  
 (function($) {
