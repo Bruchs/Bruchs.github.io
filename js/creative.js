@@ -5,40 +5,53 @@
  */
 
  $('#dw-btn').click(function() {
-    $('#dw').fadeIn("slow");
-    $('#gd').fadeOut("slow");;
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#dw').fadeIn("fast");
+    $('#gd').fadeOut("fast");;
+    $('#bb').fadeOut("fast");
+	$('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
 });
 
  $('#rm-btn').click(function() {
-	$('#rm').fadeIn("slow");
-    $('#dw').fadeOut("slow");
-    $('#gd').fadeOut("slow");
-    $('#bb').fadeOut("slow");
+	$('#rm').fadeIn("fast");
+    $('#dw').fadeOut("fast");
+    $('#gd').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+      $('#ne').fadeOut("fast");
 });
 
   $('#gd-btn').click(function() {
-    $('#gd').fadeIn("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#gd').fadeIn("fast");
+    $('#dw').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+	$('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
 });
 
   $('.close-btn').click(function() {
-    $('#gd').fadeOut("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+	$('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
 });
 
   $('#bb-btn').click(function() {
-    $('#gd').fadeOut("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeIn("slow");
-	$('#rm').fadeOut("slow");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#bb').fadeIn("fast");
+  	$('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
 });
- 
+
+$('#ne-btn').click(function() {
+  $('#ne').fadeIn("fast");
+  $('#gd').fadeOut("fast");
+  $('#dw').fadeOut("fast");
+  $('#bb').fadeOut("fast");
+  $('#rm').fadeOut("fast");
+});
+
 (function($) {
     "use strict"; // Start of use strict
 
