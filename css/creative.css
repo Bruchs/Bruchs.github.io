@@ -494,6 +494,9 @@ body {
 .bg-ne{
 	background-color: rgba(0, 100, 50, 0.75) !important;
 }
+.bg-sm{
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
 .border{
 	border: 7px solid rgba(255,255,255,0.25);
 	border-radius: 2px;
@@ -511,8 +514,7 @@ body {
 	text-shadow: 2px 2px rgba(0,0,0,0.9);
 	font-weight: bolder;
 	font-family: 'Open Sans';
-
 }
-#dw, #gd, #bb, #rm, #ne{
+#dw, #gd, #bb, #rm, #ne, #sm{
 	display: none;
 }

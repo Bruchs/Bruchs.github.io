@@ -6,10 +6,23 @@
 
  $('#dw-btn').click(function() {
     $('#dw').fadeIn("fast");
-    $('#gd').fadeOut("fast");;
+    $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
+	$('#sm').fadeOut("fast");
+	 $('.youtube_player_iframe').each(function(){
+	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
+});
+
+ $('#sm-btn').click(function() {
+    $('#sm').fadeIn("fast");
+    $('#gd').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+	$('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+	$('#dw').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -20,7 +33,8 @@
     $('#dw').fadeOut("fast");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
-      $('#ne').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+	$('#sm').fadeOut("fast");
 	   $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -32,6 +46,7 @@
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
+	$('#sm').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -43,6 +58,7 @@
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
+	$('#sm').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -54,6 +70,7 @@
     $('#bb').fadeIn("fast");
   	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
+	$('#sm').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -65,6 +82,7 @@ $('#ne-btn').click(function() {
   $('#dw').fadeOut("fast");
   $('#bb').fadeOut("fast");
   $('#rm').fadeOut("fast");
+  $('#sm').fadeOut("fast");
   $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
