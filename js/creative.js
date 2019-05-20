@@ -5,48 +5,52 @@
  */
 
  $('#dw-btn').click(function() {
-    $('#dw').fadeIn("fast");
+    $('#dw').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
  $('#sm-btn').click(function() {
-    $('#sm').fadeIn("fast");
+    $('#sm').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#dw').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
  $('#rm-btn').click(function() {
-	$('#rm').fadeIn("fast");
+	$('#rm').fadeIn("fast").css("display","inline-block");
     $('#dw').fadeOut("fast");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	   $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
   $('#gd-btn').click(function() {
-    $('#gd').fadeIn("fast");
+    $('#gd').fadeIn("fast").css("display","inline-block");
     $('#dw').fadeOut("fast");
     $('#bb').fadeOut("fast");
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
@@ -59,34 +63,53 @@
 	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
   $('#bb-btn').click(function() {
+    $('#bb').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#dw').fadeOut("fast");
-    $('#bb').fadeIn("fast");
   	$('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
 	$('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
 	 $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
-$('#ne-btn').click(function() {
-  $('#ne').fadeIn("fast");
+$('#ne-btn').click(function() 
+{
+  $('#ne').fadeIn("fast").css("display","inline-block");
   $('#gd').fadeOut("fast");
   $('#dw').fadeOut("fast");
   $('#bb').fadeOut("fast");
   $('#rm').fadeOut("fast");
   $('#sm').fadeOut("fast");
+  $('#er').fadeOut("fast");
   $('.youtube_player_iframe').each(function(){
 	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
+
+
+  $('#er-btn').click(function() {
+    $('#er').fadeIn("fast").css("display","inline-block");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
+});
+
 
 (function($) {
     "use strict"; // Start of use strict

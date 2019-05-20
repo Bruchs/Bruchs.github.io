@@ -39,8 +39,15 @@ h6 {
 	font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
 
+@-webkit-keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: -400px 400px; }
+}
+
 .bg-primary {
 	background-color: #f05f40;
+	-webkit-animation: slide 50s linear infinite;
+	background-image: url('../img/bg2.png');
 }
 .bg-dark {
 	background-color: #222222;
@@ -146,22 +153,18 @@ aside {
 	}
 }
 header {
+	padding-top: 10% !important;
 	position: relative;
 	width: 100%;
-	min-height: auto;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	background-size: cover;
-	-o-background-size: cover;
-	background-position: center;
-	background-image: url('../img/header.jpg');
+	min-height:80% !important;
 	text-align: center;
 	color: white;
 }
-header .header-content {
+.header-content {
+
 	position: relative;
 	text-align: center;
-	padding: 100px 15px 100px;
+	padding: 150px 15px 0px;
 	width: 100%;
 	animation-name: example;
 	animation-duration: 1.5s;
@@ -212,33 +215,55 @@ header .header-content .header-content-inner p {
 	}
 }
 
-.section-heading {
+.section-heading 
+{
 	font-weight: 700;
-	font-size: 40px;
-	letter-spacing: 1.5px;
-	margin-top: 0;
-	margin-bottom: 1%;
+	font-size: 350%;
+	letter-spacing: 2px;
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+
+	color: #FFFFFF;
+	text-shadow: 0 1px 0 #CCCCCC,
+	0 2px 0 #c9c9c9, 
+	0 3px 0 #bbb, 0 4px 
+	0 #b9b9b9, 
+	0 5px 0 #aaa, 
+	0 6px 1px rgba(0,0,0,.1), 
+	0 0 5px rgba(0,0,0,.1), 
+	0 1px 3px rgba(0,0,0,.3),
+	0 3px 5px rgba(0,0,0,.2), 
+	0 5px 10px rgba(0,0,0,.25), 
+	0 10px 10px rgba(0,0,0,.2), 
+	0 20px 20px rgba(0,0,0,.15);
 }
 .fa-chevron-down{
 	margin-bottom: 2%;
 	color: rgba(255,255,255,0.4)
 }
+
+#about
+{
+
+	padding:  2.5%;
+}
+
 .about-me-img{
 	border-radius: 300px;
 	animation-name: my-img;
 	animation-duration: 1.5s;
 	border: 7px solid rgba(255,255,255,0.25);
 	margin-bottom: 2%;
+
+
 }
-.section-text{
-	font-style: oblique;
-	font-size: 14px;
-	font-weight: lighter;
+.section-text
+{
+	color: white;
+	font-size: 15px;
 	letter-spacing: 1px;
 	padding: 1.5% 0%;
-	margin-bottom: 5%;
-	border-bottom: 5px solid rgba(255,255,255,0.25);
- border-top: 5px solid rgba(255,255,255,0.25);
+	text-align: left;
 }
 .section-text-contact{
 	margin-top: 2%;
@@ -250,7 +275,7 @@ header .header-content .header-content-inner p {
 	padding: 1.5% 0%;
 	margin-bottom: 5%;
 	border-bottom: 3px solid #f05f40;;
- border-top: 3px solid #f05f40;;
+ 	border-top: 3px solid #f05f40;;
 }
 .service-box {
 	max-width: 400px;
@@ -269,12 +294,31 @@ header .header-content .header-content-inner p {
 .service-box p {
 	margin-bottom: 0;
 }
-.portfolio-img{
-	min-width: 90%;
-	display: block;
-	margin-left: auto;
-	margin-right: auto
+
+#portfolio 
+{
+	margin: auto;
+ 	float: none !important;
 }
+.portfolio-img{
+	display: block;
+	transition: transform .2s;
+}
+
+.portfolio-img:hover
+{
+	transform: scale(1.015);
+    box-shadow:
+        inset 0 0 12.5px white,      /* inner white */
+        inset 5px 0 20px #0000FF,   /* inner left magenta short */
+        inset -5px 0 20px #00FFFF,  /* inner right cyan short */
+        inset 5px 0 75px #0000FF,  /* inner left magenta broad */
+        inset -5px 0 75px #00FFFF, /* inner right cyan broad */
+        0 0 12.5px white,            /* outer white */
+        -2.5px 0 20px #0000FF,        /* outer left magenta */
+        2.5px 0 20px #00FFFF;         /* outer right cyan */
+}
+
 .carousel-modal-btn{
 	padding: 2% 5%;
 	position: relative;
@@ -344,14 +388,46 @@ header .header-content .header-content-inner p {
 	padding-right: 0;
 	padding-left: 0;
 }
-.btn-default {
+
+.close-btn
+{
+	padding-top: 2.5%;
+	padding-bottom: 2.5%;
+	transition: all 0.35s;	
+}
+
+.close-btn:hover
+{
+	color: red;
+}
+
+.btn-default 
+{
+	font-size: 200%;
 	color: #222222;
 	background-color: #ffffff;
 	border-color: #ffffff;
 	-webkit-transition: all 0.35s;
 	-moz-transition: all 0.35s;
-	transition: all 0.35s;
+	transition: all 0.35s;	
+	display: block;
 }
+
+.btn-default:hover
+{
+	color: white !important;
+	transform: scale(1.015);
+    box-shadow:
+        inset 0 0 12.5px white,      /* inner white */
+        inset 5px 0 20px orange,   /* inner left magenta short */
+        inset -5px 0 20px red,  /* inner right cyan short */
+        inset 5px 0 75px orange,  /* inner left magenta broad */
+        inset -5px 0 75px red, /* inner right cyan broad */
+        0 0 12.5px white,            /* outer white */
+        -2.5px 0 20px orange,        /* outer left magenta */
+        2.5px 0 20px red;         /* outer right cyan */
+}
+
 .btn-default:hover,
 .btn-default:focus,
 .btn-default.focus,
@@ -446,6 +522,7 @@ fieldset[disabled] .btn-primary.active {
 	border-radius: 300px;
 	font-weight: 700;
 	text-transform: uppercase;
+	padding: 0.25% !important;
 }
 .btn-xl {
 	padding: 15px 30px;
@@ -471,31 +548,88 @@ img::-moz-selection {
 body {
 	webkit-tap-highlight-color: #222222;
 }
-.play-btn{
-	padding: 2% 4%;
-}
+
 .layer{
-	background-color: rgba(100	, 0, 150, 0.75);
-	padding: 100px 0;
+	padding: 2.5% 1%;
 }
 .bg-dw{
-	background-image: url("../img/bg.jpg");
-	padding: 0px !important;
+	background-color: rgba(100	, 0, 150, 0.5);
+    box-shadow:
+    inset 0 0 12.5px white,      /* inner white */
+    inset 5px 0 20px purple,   /* inner left magenta short */
+    inset -5px 0 20px purple,  /* inner right cyan short */
+    inset 5px 0 75px purple,  /* inner left magenta broad */
+    inset -5px 0 75px purple, /* inner right cyan broad */
+    0 0 12.5px white,            /* outer white */
+    -2.5px 0 20px purple,        /* outer left magenta */
+    2.5px 0 20px purple;  
 }
 .bg-gd{
-	background-color: rgba(240, 95, 64, 0.75);
+	background-color: rgba(240, 95, 64, 0.5);
+	box-shadow:
+    inset 0 0 12.5px white,      /* inner white */
+    inset 5px 0 20px orange,   /* inner left magenta short */
+    inset -5px 0 20px red,  /* inner right cyan short */
+    inset 5px 0 75px orange,  /* inner left magenta broad */
+    inset -5px 0 75px red, /* inner right cyan broad */
+    0 0 12.5px white,            /* outer white */
+    -2.5px 0 20px orange,        /* outer left magenta */
+    2.5px 0 20px orange;  
 }
-.bg-bb {
-	background-color: rgba(25, 0, 100, 0.75);
+.bg-bb 
+{
+	background-color: rgba(0, 50, 0, 0.5) !important;
+	box-shadow:
+    inset 0 0 12.5px #006400,      /* inner dark green */
+    inset 5px 0 20px #006400,   /* inner left magenta short */
+    inset -5px 0 20px #FFD700,  /* inner right cyan short */
+    inset 5px 0 75px #006400,  /* inner left magenta broad */
+    inset -5px 0 75px  #FFD700, /* inner right cyan broad */
+    0 0 12.5px #006400,            /* outer dark green */
+    -2.5px 0 20px #006400,        /* outer left magenta */
+    2.5px 0 20px #006400
+}
+.bg-er
+{
+	background-color: rgba(0, 75, 100, 0.5);
+    box-shadow:
+    inset 0 0 12.5px green,      /* inner white */
+    inset 5px 0 20px purple,   /* inner left magenta short */
+    inset -5px 0 20px blue,  /* inner right cyan short */
+    inset 5px 0 75px purple,  /* inner left magenta broad */
+    inset -5px 0 75px blue, /* inner right cyan broad */
+    0 0 12.5px green,            /* outer white */
+    -2.5px 0 20px purple,        /* outer left magenta */
+    2.5px 0 20px purple;  
 }
 .bg-rm{
 	background-color: rgba(255, 255, 255, 0.25) !important;
 }
 .bg-ne{
-	background-color: rgba(0, 100, 50, 0.75) !important;
+	background-color: rgba(0, 0, 25, 0.5) !important;
+	box-shadow:
+    inset 0 0 12.5px #006400,      /* inner dark green */
+    inset 5px 0 20px #006400,   /* inner left magenta short */
+    inset -5px 0 20px #FFD700,  /* inner right cyan short */
+    inset 5px 0 75px #006400,  /* inner left magenta broad */
+    inset -5px 0 75px  #FFD700, /* inner right cyan broad */
+    0 0 12.5px #006400,            /* outer dark green */
+    -2.5px 0 20px #006400,        /* outer left magenta */
+    2.5px 0 20px #006400
 }
-.bg-sm{
-	background-color: rgba(0, 0, 0, 0.5) !important;
+.bg-sm
+{
+	background-color: rgba(10, 0, 0, 0.75) !important;
+	box-shadow:
+    inset 0 0 12.5px black,      /* inner white */
+    inset 5px 0 20px #8B0000,   /* inner left magenta short */
+    inset -5px 0 20px #B22222,  /* inner right cyan short */
+    inset 5px 0 75px #8B0000,  /* inner left magenta broad */
+    inset -5px 0 75px  #B22222, /* inner right cyan broad */
+    0 0 12.5px black,            /* outer white */
+    -2.5px 0 20px #8B0000,        /* outer left magenta */
+    2.5px 0 20px #8B0000;  
+
 }
 .border{
 	border: 7px solid rgba(255,255,255,0.25);
@@ -515,6 +649,17 @@ body {
 	font-weight: bolder;
 	font-family: 'Open Sans';
 }
-#dw, #gd, #bb, #rm, #ne, #sm{
+#dw, #gd, #bb, #rm, #ne, #sm, #er{
 	display: none;
+	padding-bottom: 0.5%;
+}
+#about
+{
+
+	background-color: orange;
+}
+#contact
+{
+	padding-top: 1.5%;
+	display: inline-block;
 }
