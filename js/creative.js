@@ -4,16 +4,17 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
  $('#dw-btn').click(function() {
     $('#dw').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
-	$('#rm').fadeOut("fast");
+    $('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#sm').fadeOut("fast");
+    $('#sm').fadeOut("fast");
     $('#er').fadeOut("fast");
-	 $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -21,25 +22,25 @@
     $('#sm').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
-	$('#rm').fadeOut("fast");
+    $('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#dw').fadeOut("fast");
+    $('#dw').fadeOut("fast");
     $('#er').fadeOut("fast");
-	 $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
  $('#rm-btn').click(function() {
-	$('#rm').fadeIn("fast").css("display","inline-block");
+    $('#rm').fadeIn("fast").css("display","inline-block");
     $('#dw').fadeOut("fast");
     $('#gd').fadeOut("fast");
     $('#bb').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#sm').fadeOut("fast");
+    $('#sm').fadeOut("fast");
     $('#er').fadeOut("fast");
-	   $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+       $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -47,12 +48,12 @@
     $('#gd').fadeIn("fast").css("display","inline-block");
     $('#dw').fadeOut("fast");
     $('#bb').fadeOut("fast");
-	$('#rm').fadeOut("fast");
+    $('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#sm').fadeOut("fast");
+    $('#sm').fadeOut("fast");
     $('#er').fadeOut("fast");
-	 $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -60,12 +61,12 @@
     $('#gd').fadeOut("fast");
     $('#dw').fadeOut("fast");
     $('#bb').fadeOut("fast");
-	$('#rm').fadeOut("fast");
+    $('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#sm').fadeOut("fast");
+    $('#sm').fadeOut("fast");
     $('#er').fadeOut("fast");
-	 $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -73,12 +74,12 @@
     $('#bb').fadeIn("fast").css("display","inline-block");
     $('#gd').fadeOut("fast");
     $('#dw').fadeOut("fast");
-  	$('#rm').fadeOut("fast");
+    $('#rm').fadeOut("fast");
     $('#ne').fadeOut("fast");
-	$('#sm').fadeOut("fast");
+    $('#sm').fadeOut("fast");
     $('#er').fadeOut("fast");
-	 $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -92,7 +93,7 @@ $('#ne-btn').click(function()
   $('#sm').fadeOut("fast");
   $('#er').fadeOut("fast");
   $('.youtube_player_iframe').each(function(){
-	this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
   });
 });
 
@@ -117,9 +118,10 @@ $('#ne-btn').click(function()
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
+        setTimeout(function(){         $('html, body').animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
+        }, 1250, 'easeInOutExpo'); }, 250);
+
         event.preventDefault();
     });
 
