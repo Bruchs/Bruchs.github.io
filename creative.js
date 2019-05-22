@@ -4,50 +4,124 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
  */
 
+
  $('#dw-btn').click(function() {
-    $('#dw').fadeIn("slow");
-    $('#gd').fadeOut("slow");;
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#dw').fadeIn("fast").css("display","inline-block");
+    $('#gd').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
+});
+
+ $('#sm-btn').click(function() {
+    $('#sm').fadeIn("fast").css("display","inline-block");
+    $('#gd').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#er').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
 });
 
  $('#rm-btn').click(function() {
-	$('#rm').fadeIn("slow");
-    $('#dw').fadeOut("slow");
-    $('#gd').fadeOut("slow");
-    $('#bb').fadeOut("slow");
+    $('#rm').fadeIn("fast").css("display","inline-block");
+    $('#dw').fadeOut("fast");
+    $('#gd').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
+       $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
 });
 
   $('#gd-btn').click(function() {
-    $('#gd').fadeIn("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#gd').fadeIn("fast").css("display","inline-block");
+    $('#dw').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
 });
 
   $('.close-btn').click(function() {
-    $('#gd').fadeOut("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeOut("slow");
-	$('#rm').fadeOut("slow");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
 });
 
   $('#bb-btn').click(function() {
-    $('#gd').fadeOut("slow");
-    $('#dw').fadeOut("slow");
-    $('#bb').fadeIn("slow");
-	$('#rm').fadeOut("slow");
+    $('#bb').fadeIn("fast").css("display","inline-block");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#er').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
 });
- 
+
+$('#ne-btn').click(function() 
+{
+  $('#ne').fadeIn("fast").css("display","inline-block");
+  $('#gd').fadeOut("fast");
+  $('#dw').fadeOut("fast");
+  $('#bb').fadeOut("fast");
+  $('#rm').fadeOut("fast");
+  $('#sm').fadeOut("fast");
+  $('#er').fadeOut("fast");
+  $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
+});
+
+
+  $('#er-btn').click(function() {
+    $('#er').fadeIn("fast").css("display","inline-block");
+    $('#gd').fadeOut("fast");
+    $('#dw').fadeOut("fast");
+    $('#rm').fadeOut("fast");
+    $('#ne').fadeOut("fast");
+    $('#sm').fadeOut("fast");
+    $('#bb').fadeOut("fast");
+     $('.youtube_player_iframe').each(function(){
+    this.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*')
+  });
+});
+
+
 (function($) {
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function(event) {
         var $anchor = $(this);
-        $('html, body').stop().animate({
+        setTimeout(function(){         $('html, body').animate({
             scrollTop: ($($anchor.attr('href')).offset().top - 50)
-        }, 1250, 'easeInOutExpo');
+        }, 1250, 'easeInOutExpo'); }, 250);
+
         event.preventDefault();
     });
 
